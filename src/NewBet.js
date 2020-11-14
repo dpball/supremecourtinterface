@@ -40,5 +40,4 @@ class NewBet extends React.Component {
         );
     }
 }
-
-export default NewBet
+ 
