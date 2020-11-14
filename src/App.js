@@ -4,13 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header";
 import Content from "./Content";
-import NewBet from "./NewBet.js";
+import Newbet from "./NewBet";
 
 function App() {
   return (
 
-  <Div>
-    <NewBet />
+    <Div>
+    <Newbet />
 
 
 
@@ -26,6 +26,7 @@ function App() {
         <Grid item xs={false} sm={2} />
       </Grid>
     </Grid>
+
     </Div>
   );
 }
