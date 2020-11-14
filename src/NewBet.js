@@ -1,43 +1,4 @@
 import React, { Component } from 'react';
-import Checkbox from './Checkbox';
-
-const items = [
-    'Sport',
-    'Politics',
-    'Third Option',
-];
-
-componentWillMount = () => {
-    this.selectedCheckboxes = new Set();
-}
-
-toggleCheckbox = label => {
-    if (this.selectedCheckboxes.has(label)) {
-        this.selectedCheckboxes.delete(label);
-    } else {
-        this.selectedCheckboxes.add(label);
-    }
-}
-
-handleFormSubmit = formSubmitEvent => {
-    formSubmitEvent.preventDefault();
-
-    for (const checkbox of this.selectedCheckboxes) {
-        console.log(checkbox, 'is selected.');
-    }
-}
-
-createCheckbox = label => (
-    <Checkbox
-        label={label}
-        handleCheckboxChange={this.toggleCheckbox}
-        key={label}
-    />
-)
-
-createCheckboxes = () => (
-    items.map(this.createCheckbox)
-)
 
 
 class NewBet extends React.Component {
@@ -59,7 +20,10 @@ class NewBet extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                {this.createCheckboxes()}
+
+
+                <label htmlFor="title">Enter the category</label>
+                <input id="category" name="category" type="text" />
 
                 <label htmlFor="title">Enter the title</label>
                 <input id="title" name="title" type="text" />

@@ -4,9 +4,11 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header";
 import Content from "./Content";
+import newBet from "./NewBet.js";
 
 function App() {
   return (
+
     <Grid container direction="column">
       <Grid item>
         <Header style = {{backgroundColor: "#ED1C24"}} />
@@ -19,8 +21,6 @@ function App() {
         <Grid item xs={false} sm={2} />
       </Grid>
     </Grid>
-
-
 
   );
 }
